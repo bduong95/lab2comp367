@@ -1,12 +1,19 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                // Clean and package the Maven project
-                sh 'mvn clean package'
+                // Checkout code from GitHub repository
+                git 'https://github.com/bduong95/COMP367-Lab2.git'
             }
         }
+        stage('Build') {
+            steps {
+                // Run shell commands or other build steps here
+                sh 'echo "Build step"'
+            }
+        }
+        // Add more stages as needed
     }
 }
