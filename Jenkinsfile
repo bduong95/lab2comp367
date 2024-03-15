@@ -4,14 +4,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from GitHub repository
-                git 'https://github.com/bduong95/COMP367-Lab2.git'
+                echo "Checkout Step"
             }
         }
         stage('Build') {
             steps {
-                // Run shell commands or other build steps here
-                sh 'echo "Build step"'
+                echo "Build Step"
             }
         }
         // Add more stages as needed
